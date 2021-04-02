@@ -19,8 +19,8 @@ body {
 
 input {
     height: 30px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-top: 10px;
+    margin-bottom: 25px;
     border-radius: 5px;
     border-color: white;
 } 
