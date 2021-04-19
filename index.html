@@ -3,18 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="myjscode.js"></script>
+    
     <title>Document</title>
 </head>
 <body>
-    <form action="" id="myForm">
-        name: <input type="text" id="name"> <br>
-        email   <input type="text" id="email"> <br>
-        password: <input type="password" id="password"> <br>
-        confirm password: <input type="password" id="confirm_password"> <br>
-        <input type="submit">
+    <form action="" id="myForm" class="">
+
+        <p>Name</p> 
+        <input type="text" id="name" class="form-control">   
+        <p>Email</p> 
+        <input type="text" id="email" class="form-control">
+        <p>Password</p> 
+        <input type="password" id="password" class= "form-control">
+        <p>Confirm Password</p>
+        <input type="password" id="confirm_password" class= "form-control">
+        <button class = "btn">Submit</button>
+        
     </form>
 </body>
 </html>
