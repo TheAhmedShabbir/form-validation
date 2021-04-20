@@ -3,15 +3,16 @@
 }
 
 body {
+    height: 640px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     max-width: 1440px;
+    background-color: #E5E7EB;
 }
 
 #myForm {
-    height: auto;
     width: 40%;
     padding-top: 60px;
     padding-bottom: 20px;
@@ -39,7 +40,7 @@ body {
 
 .btn {
     margin-top: 15px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     width: 18%;
     background-color: #F3F4F6;
 }
