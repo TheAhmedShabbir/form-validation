@@ -82,7 +82,7 @@ function submit(e){
     // email.style.border = 'ced4da'
     // password.style.border = '#ced4da'
     // confirmPassword.style.border = '#ced4da'
-    window.reload()
+    document.querySelector('myForm').window.reload()
   }
 
   e.preventDefault()
