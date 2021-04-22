@@ -1,4 +1,4 @@
-const myform = document.querySelector('.btn').addEventListener('click', submit)
+const submitbtn = document.querySelector('.btn').addEventListener('click', submit)
 const nameInput = document.getElementById('name')
 const email = document.getElementById('email')
 const password = document.getElementById('password')
@@ -6,11 +6,11 @@ const confirmPassword = document.getElementById('confirm_password')
 const btn = document.querySelector('.btn')
 
 nameInput.addEventListener('blur', nameCheck)
+email.addEventListener('blur', emailCheck)
 password.addEventListener('blur', passwordCheck)
 confirmPassword.addEventListener('blur', confirmPasswordCheck)
 
 function nameCheck(){
-  nameInput.style.border = '#ced4da'
 
   if(nameInput.value.length >= 5){
     nameInput.style.border = '2px solid #10B981'
@@ -25,8 +25,21 @@ function nameCheck(){
   }
 }
 
+function emailCheck(){
+  if(email.value.length != 0){
+    document.querySelector('.email-text').textContent = 'Email'
+    document.querySelector('.email-text').style.color = 'white'
+    email.style.border = '2px solid #10B981'
+    return true
+  } else {
+    email.style.border = '2px solid #EF4444'
+    document.querySelector('.email-text').textContent = 'Email is incorrect!'
+    document.querySelector('.email-text').style.color = '#EF4444'
+    return false
+  }
+}
+
 function passwordCheck(){
-  password.style.border = '#ced4da'
 
   if(password.value.length >= 8){
     document.querySelector('.password-text').textContent = 'Password'
@@ -42,7 +55,6 @@ function passwordCheck(){
 }
 
 function confirmPasswordCheck(){
-  confirmPassword.style.border = '#ced4da'
   
   if(confirmPassword.value.length >= 8 && confirmPassword.value == password.value){
     confirmPassword.style.border = '2px solid #10B981'
@@ -59,17 +71,21 @@ function confirmPasswordCheck(){
 
 // Submit button
 function submit(e){
-  if(nameCheck() && passwordCheck() && confirmPasswordCheck() == true){
+  if(nameCheck() && emailCheck() && passwordCheck() && confirmPasswordCheck() == true){
     alert('Form is successfully Submitted')
 
-    nameInput.value = ''
-    email.value = ''
-    password.value = ''
-    confirmPassword.value = ''
-    nameInput.style.border = '#ced4da'
-    password.style.border = '#ced4da'
-    confirmPassword.style.border = '#ced4da'
+    // nameInput.value = ''
+    // email.value = ''
+    // password.value = ''
+    // confirmPassword.value = ''
+    // nameInput.style.border = '#ced4da'
+    // email.style.border = 'ced4da'
+    // password.style.border = '#ced4da'
+    // confirmPassword.style.border = '#ced4da'
+
+    window.reload()
   }
+
   e.preventDefault()
 }
 

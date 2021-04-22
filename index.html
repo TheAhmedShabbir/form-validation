@@ -14,15 +14,15 @@
     <form action="#" id="myForm">
 
         <p class = 'name-text'>Name</p> 
-        <input type="text" id="name" class="form-control">
+        <input type="text" id="name" class="form-control" required>
         <p class = 'email-text'>Email</p> 
         <input type="email" id="email" class="form-control" required>
         <p class="password-text">Password</p> 
-        <input type="password" id="password" class= "form-control">
+        <input type="password" id="password" class= "form-control" required>
         <p class="confirm-password-text">Confirm Password</p>
-        <input type="password" id="confirm_password" class= "form-control">
+        <input type="password" id="confirm_password" class= "form-control" required>
 
-        <button type = 'submit' class = "btn">Submit</button>
+        <button type = 'submit' class = "btn" onsubmit="submit()">Submit</button>
 
     </form>
 
