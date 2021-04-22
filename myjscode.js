@@ -60,7 +60,7 @@ function confirmPasswordCheck(){
 // Submit button
 function submit(e){
   if(nameCheck() && passwordCheck() && confirmPasswordCheck() == true){
-    alert('Form is being Submitted')
+    alert('Form is successfully Submitted')
 
     nameInput.value = ''
     email.value = ''
