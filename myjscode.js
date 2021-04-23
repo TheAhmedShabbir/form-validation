@@ -1,9 +1,8 @@
-const submitbtn = document.querySelector('.btn').addEventListener('click', submit)
+document.querySelector('.btn').addEventListener('click', submit)
 const nameInput = document.getElementById('name')
 const email = document.getElementById('email')
 const password = document.getElementById('password')
 const confirmPassword = document.getElementById('confirm_password')
-const btn = document.querySelector('.btn')
 
 nameInput.addEventListener('blur', nameCheck)
 email.addEventListener('blur', emailCheck)
@@ -82,12 +81,11 @@ function submit(e){
     // email.style.border = 'ced4da'
     // password.style.border = '#ced4da'
     // confirmPassword.style.border = '#ced4da'
-    document.querySelector('myForm').window.reload()
+    location.reload()
   }
 
   e.preventDefault()
 }
-
 /* 
 1. Name should be atleast 5 characters long.
 2. passwords must match
